@@ -91,7 +91,8 @@ available on all OSes irony-iotask support."
     (irony-iotask-result-set-value result 'blah)
     (should (eq (irony-iotask-result-get result) 'blah))))
 
-(define-error 'irony-iotask-result/test-error "Irony I/O task sample error")
+(irony--define-error 'irony-iotask-result/test-error
+                     "Irony I/O task sample error")
 
 (ert-deftest irony-iotask-result/set-error ()
   (let ((result (irony-iotask-result-create)))
