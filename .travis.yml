@@ -62,4 +62,4 @@ script:
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
     ../server
   - make -k
-  - make check
+  - ctest -VV
